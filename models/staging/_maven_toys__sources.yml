@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: maven_toys
+    database: maven_toys 
+    schema: public 
+    tables:
+      - name: inventory
+      - name: products
+      - name: sales
+      - name: stores
