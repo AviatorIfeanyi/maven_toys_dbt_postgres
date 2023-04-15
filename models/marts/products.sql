@@ -1,9 +1,9 @@
 
 with products_aggregated as (
-  select * from {{ ref('int_products_aggregated') }}
+  select * from {{ ref('int_product_aggregated') }}
 ),
 products as (
-  select * from {{ ref('stg_maven_toys_products') }}
+  select * from {{ ref('stg_maven_toys__products') }}
 ),
 product_sales as (
   select * from {{ ref('int_products_joined_sales') }}
