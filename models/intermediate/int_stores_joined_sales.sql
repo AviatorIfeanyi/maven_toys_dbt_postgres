@@ -9,9 +9,9 @@ sales as (
 store_location_sales as(
   select 
     store_location, 
-    count(s.*) as store_sales 
-  from sales as s 
-  left join stores 
+    count(sales.*) as store_sales 
+  from sales 
+  join stores 
     using(store_id)
   group by store_location
 )
