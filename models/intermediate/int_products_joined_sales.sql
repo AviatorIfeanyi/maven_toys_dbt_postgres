@@ -1,12 +1,12 @@
 with sales as (
-  select * from {{ ref('stg_maven_toys_sales') }}
-)
+  select * from {{ ref('stg_maven_toys__sales') }}
+),
 
-with products as (
-  select * from {{ ref('stg_maven_toys_products') }}
-)
+products as (
+  select * from {{ ref('stg_maven_toys__products') }}
+),
 
-with products_sales_joined as (
+products_sales_joined as (
   select product_category,
     sum(p.product_cost * s.units) as product_category_cost,
     sum(p.product_price * s.units) as product_category_price,

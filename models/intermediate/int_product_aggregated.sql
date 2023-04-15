@@ -1,5 +1,5 @@
 with products as (
-  select * from {{ref('stg_maven_toys_products')}}
+  select * from {{ref('stg_maven_toys__products')}}
 )
 
 select 

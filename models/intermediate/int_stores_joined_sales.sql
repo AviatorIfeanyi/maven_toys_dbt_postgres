@@ -1,12 +1,12 @@
 with stores as (
-  select * from {{ ref('stg_maven_toys_stores')}}
+  select * from {{ ref('stg_maven_toys__stores')}}
 ),
+
 sales as (
-  select * from {{ ref('stg_maven_toys_sales')}}
-)
+  select * from {{ ref('stg_maven_toys__sales')}}
+),
 
-
-with store_location_sales as(
+store_location_sales as(
   select 
     store_location, 
     count(s.*) as store_sales 
