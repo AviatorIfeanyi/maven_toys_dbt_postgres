@@ -7,17 +7,13 @@ products as (
 ),
 
 products_sales_joined as (
-  select product_category,
-	  count(p.*) as category_count,
-    sum(p.product_cost * s.units) as product_category_cost,
-    sum(p.product_price * s.units) as product_category_price,
-    sum((p.product_price * s.units) - (p.product_cost * s.units)) as profit
+  select p.product_id, product_category,
+    p.product_cost * s.units as product_category_cost,
+    p.product_price * s.units as product_category_price
   from sales as s
     join products as p 
     on s.product_id = p.product_id
-    group by product_category
 )
 
 select  *
 from products_sales_joined
-order by profit desc

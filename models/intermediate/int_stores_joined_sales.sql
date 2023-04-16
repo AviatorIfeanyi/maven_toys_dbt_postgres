@@ -11,7 +11,7 @@ store_location_sales as(
     store_location, 
     count(sales.*) as store_sales 
   from sales 
-  join stores 
+  left join stores 
     using(store_id)
   group by store_location
 )
