@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_maven_toys__inventory
+    description: ''
+    columns:
+      - name: inventory_id,
+        # description: '{{ doc("") }}'
+        tests:
+          - unique
+          - not_null
+      
+      - name: store_id
+        # description: '{{ doc("store_id") }}'
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_maven_toys__stores')
+              field: store_id
+
+      - name: product_id
+        # description: '{{ doc("product_id") }}'
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_maven_toys__products')
+              field: product_id
+
+      - name: stock_on_hand
+        # description: '{{ doc("stock_on_hand") }}'

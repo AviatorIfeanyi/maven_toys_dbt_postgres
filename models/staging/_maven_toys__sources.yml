@@ -4,6 +4,7 @@ sources:
   - name: maven_toys
     database: maven_toys 
     schema: public 
+    description: '{{ doc("maven_toys") }}'
     tables:
       - name: inventory
       - name: products
