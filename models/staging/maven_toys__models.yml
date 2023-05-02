@@ -28,3 +28,28 @@ models:
 
       - name: stock_on_hand
         # description: '{{ doc("stock_on_hand") }}'
+
+  - name: stg_maven_toys__products
+    description: ''
+    columns:
+      - name: product_id,
+        # description: '{{ doc("") }}'
+        tests:
+          - unique
+          - not_null
+      - name: product_name,
+        # description: '{{ doc("") }}'
+        tests:
+          - not_null
+      - name: product_category,
+        # description: '{{ doc("") }}'
+        tests:
+          - not_null
+      - name: product_price,
+        # description: '{{ doc("") }}'
+        tests:
+          - not_null
+      - name: product_cost,
+        # description: '{{ doc("") }}'
+        tests:
+          - not_null
