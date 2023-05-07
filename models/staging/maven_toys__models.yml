@@ -95,17 +95,17 @@ models:
           - not_null
       
       - name: store_name
-        # description: '{{ doc("store_id") }}'
+        # description: '{{ doc("store_name") }}'
         tests:
           - not_null
 
       - name: store_city
-        # description: '{{ doc("product_id") }}'
+        # description: '{{ doc("store_city") }}'
         tests:
           - not_null
 
       - name: store_location
-        # description: '{{ doc("stock_on_hand") }}'
+        # description: '{{ doc("store_location") }}'
         tests:
           - not_null
 
